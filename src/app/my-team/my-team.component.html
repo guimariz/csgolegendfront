@@ -1,0 +1,32 @@
+<div class="panel-header panel-header-sm"></div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-2" *ngFor="let player of players">
+      <div class="card card-user">
+        <div class="card-body">
+          <div class="teamIMG">
+            <img src="{{ team.logo }}" alt="..." />
+          </div>
+          <div class="author">
+            <a href="#">
+              <img
+                class="avatar border-gray playerIMG"
+                src="{{ player.image }}"
+                alt="..."
+              />
+              <h5 class="title">{{ player.ign }}</h5>
+            </a>
+            <p class="description">
+              {{ player.name }} - {{ player.country.code }}
+            </p>
+          </div>
+          <p class="description text-center">{{ player.team.name }} <br /></p>
+          <hr />
+          <p class="yellow text-center">
+            Rating: {{ player.statistics.rating }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
